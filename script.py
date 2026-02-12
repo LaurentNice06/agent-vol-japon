@@ -26,8 +26,7 @@ BUDGET_MAX = 1300
 
 # périodes de départ possibles
 PERIODS = [
-    ("2026-10-01", "2026-12-10"),   # automne / début hiver
-    ("2027-03-20", "2027-04-10")    # sakura
+    ("2026-11-01", "2026-12-15") # automne / début hiver
 ]
 
 MIN_DAYS = 14

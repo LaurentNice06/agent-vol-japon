@@ -1,4 +1,3 @@
-import sqlite3
 import pandas as pd
 import streamlit as st
 
@@ -6,12 +5,14 @@ st.set_page_config(page_title="Vols Japon", layout="wide")
 
 st.title("✈️ Surveillance des vols Nice → Japon")
 
-conn = sqlite3.connect("flights.db")
+import os
 
-df = pd.read_sql_query(
-    "SELECT * FROM flights ORDER BY checked_at DESC",
-    conn
-)
+if not os.path.exists("flights.csv"):
+    st.info("Aucun vol enregistré pour le moment.")
+    st.stop()
+
+df = pd.read_csv("flights.csv")
+df = df.sort_values("checked_at", ascending=False)
 
 if df.empty:
     st.info("Aucun vol enregistré pour le moment.")

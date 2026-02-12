@@ -1,0 +1,4 @@
+amadeus
+python-dotenv
+pandas
+streamlit

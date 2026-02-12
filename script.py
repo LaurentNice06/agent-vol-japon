@@ -168,5 +168,13 @@ Critères respectés :
                         print("Erreur API:", e)
 
 
+def export_csv():
+    import pandas as pd
+    conn = sqlite3.connect(DB_FILE)
+    df = pd.read_sql_query("SELECT * FROM flights", conn)
+    df.to_csv("flights.csv", index=False)
+    conn.close()
+
 if __name__ == "__main__":
     scan()
+    export_csv()

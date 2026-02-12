@@ -24,6 +24,15 @@ DESTINATIONS = ["NRT", "HND", "KIX"]
 BUDGET_MIN = 800
 BUDGET_MAX = 1300
 
+ALLOWED_AIRLINES = [
+    "AF",  # Air France
+    "KL",  # KLM
+    "LH",  # Lufthansa
+    "LX",  # Swiss
+    "NH",  # ANA
+    "JL"   # Japan Airlines
+]
+
 # périodes de départ possibles
 PERIODS = [
     ("2026-11-01", "2026-12-15") # automne / début hiver

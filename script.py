@@ -84,7 +84,7 @@ def daterange(start_date, end_date):
     current = start_date
     while current <= end_date:
         yield current
-        current += timedelta(days=1)
+        current += timedelta(days=10)
 
 
 def scan():
